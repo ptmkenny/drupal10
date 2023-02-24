@@ -1,0 +1,6 @@
+name: App Log
+type: module
+description: 'App log for Ionic'
+package: ABC
+core_version_requirement: ^10 || ^11
+version: 1.0-beta

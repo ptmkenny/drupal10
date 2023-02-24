@@ -1,0 +1,3389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
+  <parameters>
+    <parameter key="kernel.environment">prod</parameter>
+    <parameter key="container.modules" type="collection">
+      <parameter key="app_log" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">modules/custom/app_log/app_log.info.yml</parameter>
+        <parameter key="filename">null</parameter>
+      </parameter>
+    </parameter>
+    <parameter key="install_profile">null</parameter>
+    <parameter key="container.namespaces" type="collection">
+      <parameter key="Drupal\app_log">modules/custom/app_log/src</parameter>
+      <parameter key="Drupal\Core\ProxyClass">core/lib/Drupal/Core/ProxyClass</parameter>
+      <parameter key="Drupal\Core\Config">core/lib/Drupal/Core/Config</parameter>
+      <parameter key="Drupal\Core\TypedData">core/lib/Drupal/Core/TypedData</parameter>
+      <parameter key="Drupal\Core\Datetime">core/lib/Drupal/Core/Datetime</parameter>
+      <parameter key="Drupal\Core\Entity">core/lib/Drupal/Core/Entity</parameter>
+      <parameter key="Drupal\Core\Mail">core/lib/Drupal/Core/Mail</parameter>
+      <parameter key="Drupal\Core\Path">core/lib/Drupal/Core/Path</parameter>
+      <parameter key="Drupal\Core\Render">core/lib/Drupal/Core/Render</parameter>
+      <parameter key="Drupal\Core\Field">core/lib/Drupal/Core/Field</parameter>
+      <parameter key="Drupal\Core\Action">core/lib/Drupal/Core/Action</parameter>
+      <parameter key="Drupal\Core\TempStore">core/lib/Drupal/Core/TempStore</parameter>
+      <parameter key="Drupal\Core\Menu">core/lib/Drupal/Core/Menu</parameter>
+      <parameter key="Drupal\Core\Validation">core/lib/Drupal/Core/Validation</parameter>
+      <parameter key="Drupal\Core\Block">core/lib/Drupal/Core/Block</parameter>
+      <parameter key="Drupal\Component\Annotation">core/lib/Drupal/Component/Annotation</parameter>
+    </parameter>
+    <parameter key="language.default_values" type="collection">
+      <parameter key="id">en</parameter>
+      <parameter key="name">English</parameter>
+      <parameter key="direction">ltr</parameter>
+      <parameter key="weight">0</parameter>
+      <parameter key="locked">false</parameter>
+    </parameter>
+    <parameter key="app.root">/Users/private/d/d10/web</parameter>
+    <parameter key="site.path">sites/default</parameter>
+    <parameter key="session.storage.options" type="collection">
+      <parameter key="gc_probability">1</parameter>
+      <parameter key="gc_divisor">100</parameter>
+      <parameter key="gc_maxlifetime">200000</parameter>
+      <parameter key="cookie_lifetime">2000000</parameter>
+      <parameter key="sid_length">48</parameter>
+      <parameter key="sid_bits_per_character">6</parameter>
+    </parameter>
+    <parameter key="twig.config" type="collection">
+      <parameter key="debug">false</parameter>
+      <parameter key="auto_reload">null</parameter>
+      <parameter key="cache">true</parameter>
+      <parameter key="allowed_file_extensions" type="collection">
+        <parameter>css</parameter>
+        <parameter>html</parameter>
+        <parameter>js</parameter>
+        <parameter>svg</parameter>
+        <parameter>twig</parameter>
+      </parameter>
+    </parameter>
+    <parameter key="renderer.config" type="collection">
+      <parameter key="required_cache_contexts" type="collection">
+        <parameter>languages:language_interface</parameter>
+        <parameter>theme</parameter>
+        <parameter>user.permissions</parameter>
+      </parameter>
+      <parameter key="auto_placeholder_conditions" type="collection">
+        <parameter key="max-age">0</parameter>
+        <parameter key="contexts" type="collection">
+          <parameter>session</parameter>
+          <parameter>user</parameter>
+        </parameter>
+        <parameter key="tags" type="collection"/>
+      </parameter>
+      <parameter key="debug">false</parameter>
+    </parameter>
+    <parameter key="factory.keyvalue" type="collection">
+      <parameter key="default">keyvalue.database</parameter>
+    </parameter>
+    <parameter key="http.response.debug_cacheability_headers">false</parameter>
+    <parameter key="factory.keyvalue.expirable" type="collection">
+      <parameter key="default">keyvalue.expirable.database</parameter>
+    </parameter>
+    <parameter key="filter_protocols" type="collection">
+      <parameter>http</parameter>
+      <parameter>https</parameter>
+      <parameter>ftp</parameter>
+      <parameter>news</parameter>
+      <parameter>nntp</parameter>
+      <parameter>tel</parameter>
+      <parameter>telnet</parameter>
+      <parameter>mailto</parameter>
+      <parameter>irc</parameter>
+      <parameter>ssh</parameter>
+      <parameter>sftp</parameter>
+      <parameter>webcal</parameter>
+      <parameter>rtsp</parameter>
+    </parameter>
+    <parameter key="cors.config" type="collection">
+      <parameter key="enabled">false</parameter>
+      <parameter key="allowedHeaders" type="collection"/>
+      <parameter key="allowedMethods" type="collection"/>
+      <parameter key="allowedOrigins" type="collection">
+        <parameter>*</parameter>
+      </parameter>
+      <parameter key="exposedHeaders">false</parameter>
+      <parameter key="maxAge">false</parameter>
+      <parameter key="supportsCredentials">false</parameter>
+    </parameter>
+    <parameter key="tempstore.expire">604800</parameter>
+    <parameter key="persist_ids" type="collection">
+      <parameter>class_loader</parameter>
+      <parameter>kernel</parameter>
+      <parameter>request_stack</parameter>
+      <parameter>router.request_context</parameter>
+    </parameter>
+    <parameter key="main_content_renderers" type="collection">
+      <parameter key="html">main_content_renderer.html</parameter>
+      <parameter key="drupal_ajax">main_content_renderer.ajax</parameter>
+      <parameter key="iframeupload">main_content_renderer.ajax</parameter>
+      <parameter key="drupal_dialog">main_content_renderer.dialog</parameter>
+      <parameter key="drupal_dialog.off_canvas">main_content_renderer.off_canvas</parameter>
+      <parameter key="drupal_dialog.off_canvas_top">main_content_renderer.off_canvas_top</parameter>
+      <parameter key="drupal_modal">main_content_renderer.modal</parameter>
+    </parameter>
+    <parameter key="twig_extension_hash">bezcDeLHfzz3zStvTHvrnbP0CUntduoW4cW1OOiUKdc</parameter>
+    <parameter key="dynamic_access_check_services" type="collection">
+      <parameter>access_check.header.csrf</parameter>
+    </parameter>
+    <parameter key="cache_bins" type="collection">
+      <parameter key="cache.static">static</parameter>
+      <parameter key="cache.bootstrap">bootstrap</parameter>
+      <parameter key="cache.config">config</parameter>
+      <parameter key="cache.default">default</parameter>
+      <parameter key="cache.entity">entity</parameter>
+      <parameter key="cache.menu">menu</parameter>
+      <parameter key="cache.render">render</parameter>
+      <parameter key="cache.data">data</parameter>
+      <parameter key="cache.discovery">discovery</parameter>
+    </parameter>
+    <parameter key="cache_default_bin_backends" type="collection">
+      <parameter key="static">cache.backend.memory</parameter>
+      <parameter key="bootstrap">cache.backend.chainedfast</parameter>
+      <parameter key="config">cache.backend.chainedfast</parameter>
+      <parameter key="discovery">cache.backend.chainedfast</parameter>
+    </parameter>
+    <parameter key="cache_contexts" type="collection">
+      <parameter>cookies</parameter>
+      <parameter>headers</parameter>
+      <parameter>ip</parameter>
+      <parameter>languages</parameter>
+      <parameter>protocol_version</parameter>
+      <parameter>request_format</parameter>
+      <parameter>route</parameter>
+      <parameter>route.menu_active_trails</parameter>
+      <parameter>route.name</parameter>
+      <parameter>session</parameter>
+      <parameter>session.exists</parameter>
+      <parameter>theme</parameter>
+      <parameter>timezone</parameter>
+      <parameter>url</parameter>
+      <parameter>url.path</parameter>
+      <parameter>url.path.is_front</parameter>
+      <parameter>url.path.parent</parameter>
+      <parameter>url.query_args</parameter>
+      <parameter>url.query_args.pagers</parameter>
+      <parameter>url.site</parameter>
+      <parameter>user</parameter>
+      <parameter>user.is_super_user</parameter>
+      <parameter>user.permissions</parameter>
+      <parameter>user.roles</parameter>
+    </parameter>
+    <parameter key="authentication_providers" type="collection"/>
+    <parameter key="_deprecated_service_list" type="collection"/>
+  </parameters>
+  <services>
+    <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" public="true" synthetic="true"/>
+    <service id="class_loader" public="true" synthetic="true"/>
+    <service id="kernel" class="Symfony\Component\HttpKernel\KernelInterface" public="true" synthetic="true"/>
+    <service id="cache_context.ip" class="Drupal\Core\Cache\Context\IpCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.protocol_version" class="Drupal\Core\Cache\Context\ProtocolVersionCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.headers" class="Drupal\Core\Cache\Context\HeadersCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.cookies" class="Drupal\Core\Cache\Context\CookiesCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.session" class="Drupal\Core\Cache\Context\SessionCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.session.exists" class="Drupal\Core\Cache\Context\SessionExistsCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="session_configuration"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.request_format" class="Drupal\Core\Cache\Context\RequestFormatCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.url" class="Drupal\Core\Cache\Context\UrlCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.url.site" class="Drupal\Core\Cache\Context\SiteCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.url.path" class="Drupal\Core\Cache\Context\PathCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.url.path.parent" class="Drupal\Core\Cache\Context\PathParentCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.url.path.is_front" class="Drupal\Core\Cache\Context\IsFrontPathCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="path.matcher"/>
+    </service>
+    <service id="cache_context.url.query_args" class="Drupal\Core\Cache\Context\QueryArgsCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="cache_context.url.query_args.pagers" class="Drupal\Core\Cache\Context\PagersCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="pager.parameters"/>
+    </service>
+    <service id="cache_context.route" class="Drupal\Core\Cache\Context\RouteCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_route_match"/>
+    </service>
+    <service id="cache_context.route.name" class="Drupal\Core\Cache\Context\RouteNameCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_route_match"/>
+    </service>
+    <service id="cache_context.route.menu_active_trails" class="Drupal\Core\Cache\Context\MenuActiveTrailsCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="cache_context.user" class="Drupal\Core\Cache\Context\UserCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="cache_context.user.permissions" class="Drupal\Core\Cache\Context\AccountPermissionsCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="user_permissions_hash_generator"/>
+    </service>
+    <service id="cache_context.user.roles" class="Drupal\Core\Cache\Context\UserRolesCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="cache_context.user.is_super_user" class="Drupal\Core\Cache\Context\IsSuperUserCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="cache_context.languages" class="Drupal\Core\Cache\Context\LanguagesCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="language_manager"/>
+    </service>
+    <service id="cache_context.theme" class="Drupal\Core\Cache\Context\ThemeCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="theme.manager"/>
+    </service>
+    <service id="cache_context.timezone" class="Drupal\Core\Cache\Context\TimeZoneCacheContext" public="true">
+      <tag name="cache.context"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="cache_factory" class="Drupal\Core\Cache\CacheFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="settings"/>
+      <argument>%cache_default_bin_backends%</argument>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="cache_contexts_manager" class="Drupal\Core\Cache\Context\CacheContextsManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="service_container"/>
+      <argument>%cache_contexts%</argument>
+    </service>
+    <service id="cache_tags.invalidator" class="Drupal\Core\Cache\CacheTagsInvalidator" public="true">
+      <tag name="service_collector" call="addInvalidator" tag="cache_tags_invalidator"/>
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+      <call method="addInvalidator">
+        <argument type="service" id="cache_tags.invalidator.checksum"/>
+      </call>
+    </service>
+    <service id="cache_tags.invalidator.checksum" class="Drupal\Core\Cache\DatabaseCacheTagsChecksum" public="true">
+      <tag name="cache_tags_invalidator"/>
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="cache.backend.chainedfast" class="Drupal\Core\Cache\ChainedFastBackendFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="settings"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="cache.backend.database" class="Drupal\Core\Cache\DatabaseBackendFactory" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="cache_tags.invalidator.checksum"/>
+      <argument type="service" id="settings"/>
+    </service>
+    <service id="cache.backend.apcu" class="Drupal\Core\Cache\ApcuBackendFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument>sites/default</argument>
+      <argument type="service" id="cache_tags.invalidator.checksum"/>
+    </service>
+    <service id="cache.backend.php" class="Drupal\Core\Cache\PhpBackendFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="cache_tags.invalidator.checksum"/>
+    </service>
+    <service id="cache.backend.memory" class="Drupal\Core\Cache\MemoryBackendFactory" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="cache.static" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin" default_backend="cache.backend.memory"/>
+      <tag name="_provider" provider="core"/>
+      <argument>static</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.bootstrap" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin" default_backend="cache.backend.chainedfast"/>
+      <tag name="_provider" provider="core"/>
+      <argument>bootstrap</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.config" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin" default_backend="cache.backend.chainedfast"/>
+      <tag name="_provider" provider="core"/>
+      <argument>config</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.default" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin"/>
+      <tag name="_provider" provider="core"/>
+      <argument>default</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.entity" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin"/>
+      <tag name="_provider" provider="core"/>
+      <argument>entity</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.menu" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin"/>
+      <tag name="_provider" provider="core"/>
+      <argument>menu</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.render" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin"/>
+      <tag name="_provider" provider="core"/>
+      <argument>render</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.data" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin"/>
+      <tag name="_provider" provider="core"/>
+      <argument>data</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache.discovery" class="Drupal\Core\Cache\CacheBackendInterface" public="true">
+      <tag name="cache.bin" default_backend="cache.backend.chainedfast"/>
+      <tag name="_provider" provider="core"/>
+      <argument>discovery</argument>
+      <factory service="cache_factory" method="get"/>
+    </service>
+    <service id="cache_router_rebuild_subscriber" class="Drupal\Core\EventSubscriber\CacheRouterRebuildSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="page_cache_request_policy" class="Drupal\Core\PageCache\DefaultRequestPolicy" public="true">
+      <tag name="service_collector" tag="page_cache_request_policy" call="addPolicy"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="session_configuration"/>
+    </service>
+    <service id="page_cache_response_policy" class="Drupal\Core\ProxyClass\PageCache\ChainResponsePolicy" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.page_cache_response_policy</argument>
+    </service>
+    <service id="page_cache_kill_switch" class="Drupal\Core\PageCache\ResponsePolicy\KillSwitch" public="true">
+      <tag name="page_cache_response_policy"/>
+      <tag name="dynamic_page_cache_response_policy"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="config.manager" class="Drupal\Core\Config\ConfigManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="config.typed"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="config.storage"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="entity.repository"/>
+      <argument type="service" id="extension.path.resolver"/>
+    </service>
+    <service id="config.factory" class="Drupal\Core\Config\ConfigFactory" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="service_collector" tag="config.factory.override" call="addOverride"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.storage"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="config.typed"/>
+    </service>
+    <service id="config.importer_subscriber" class="Drupal\Core\Config\Importer\FinalMissingContentSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="config.installer" class="Drupal\Core\ProxyClass\Config\ConfigInstaller" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.config.installer</argument>
+    </service>
+    <service id="config.storage" class="Drupal\Core\Config\CachedStorage" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service">
+        <service class="Drupal\Core\Config\DatabaseStorage">
+          <tag name="backend_overridable"/>
+          <tag name="_provider" provider="core"/>
+          <argument type="service" id="database"/>
+          <argument>config</argument>
+        </service>
+      </argument>
+      <argument type="service" id="cache.config"/>
+    </service>
+    <service id="config.import_transformer" class="Drupal\Core\Config\ImportStorageTransformer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="lock.persistent"/>
+    </service>
+    <service id="config.storage.export" class="Drupal\Core\Config\ManagedStorage" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service">
+        <service class="Drupal\Core\Config\ExportStorageManager">
+          <tag name="_provider" provider="core"/>
+          <argument type="service" id="config.storage"/>
+          <argument type="service" id="database"/>
+          <argument type="service" id="event_dispatcher"/>
+          <argument type="service" id="lock"/>
+        </service>
+      </argument>
+    </service>
+    <service id="config.storage.sync" class="Drupal\Core\Config\FileStorage" public="true">
+      <tag name="_provider" provider="core"/>
+      <factory class="Drupal\Core\Config\FileStorageFactory" method="getSync"/>
+    </service>
+    <service id="config.storage.snapshot" class="Drupal\Core\Config\DatabaseStorage" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+      <argument>config_snapshot</argument>
+    </service>
+    <service id="config.storage.schema" class="Drupal\Core\Config\ExtensionInstallStorage" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.storage"/>
+      <argument>config/schema</argument>
+      <argument></argument>
+      <argument>true</argument>
+      <argument>null</argument>
+    </service>
+    <service id="config.typed" class="Drupal\Core\Config\TypedConfigManager" public="true">
+      <tag name="plugin_manager_cache_clear"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.storage"/>
+      <argument type="service" id="config.storage.schema"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="class_resolver"/>
+      <call method="setValidationConstraintManager">
+        <argument type="service" id="validation.constraint"/>
+      </call>
+    </service>
+    <service id="context.handler" class="Drupal\Core\Plugin\Context\ContextHandler" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="context.repository" class="Drupal\Core\Plugin\Context\LazyContextRepository" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="service_container"/>
+      <argument type="collection">
+        <argument>language.current_language_context</argument>
+      </argument>
+    </service>
+    <service id="Drupal\Component\DependencyInjection\ReverseContainer" class="Drupal\Component\DependencyInjection\ReverseContainer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="service_container"/>
+    </service>
+    <service id="cron" class="Drupal\Core\ProxyClass\Cron" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.cron</argument>
+    </service>
+    <service id="diff.formatter" class="Drupal\Core\Diff\DiffFormatter" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+    </service>
+    <service id="database" class="Drupal\Core\Database\Connection" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>default</argument>
+      <factory class="Drupal\Core\Database\Database" method="getConnection"/>
+    </service>
+    <service id="database.replica" class="Drupal\Core\Database\Connection" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>replica</argument>
+      <factory class="Drupal\Core\Database\Database" method="getConnection"/>
+    </service>
+    <service id="database.replica_kill_switch" class="Drupal\Core\Database\ReplicaKillSwitch" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="settings"/>
+      <argument type="service" id="datetime.time"/>
+      <argument type="service" id="session"/>
+    </service>
+    <service id="datetime.time" class="Drupal\Component\Datetime\Time" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="file_system" class="Drupal\Core\File\FileSystem" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="stream_wrapper_manager"/>
+      <argument type="service" id="settings"/>
+      <argument type="service" id="logger.channel.file"/>
+    </service>
+    <service id="file_url_generator" class="Drupal\Core\File\FileUrlGenerator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="stream_wrapper_manager"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="form_builder" class="Drupal\Core\Form\FormBuilder" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="form_validator"/>
+      <argument type="service" id="form_submitter"/>
+      <argument type="service">
+        <service class="Drupal\Core\Form\FormCache">
+          <tag name="_provider" provider="core"/>
+          <argument>/Users/private/d/d10/web</argument>
+          <argument type="service" id="keyvalue.expirable"/>
+          <argument type="service" id="module_handler"/>
+          <argument type="service" id="current_user"/>
+          <argument type="service" id="csrf_token"/>
+          <argument type="service" id="logger.channel.form"/>
+          <argument type="service" id="request_stack"/>
+          <argument type="service" id="page_cache_request_policy"/>
+        </service>
+      </argument>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="class_resolver"/>
+      <argument type="service" id="plugin.manager.element_info"/>
+      <argument type="service" id="theme.manager"/>
+      <argument type="service" id="csrf_token" on-invalid="ignore"/>
+    </service>
+    <service id="form_validator" class="Drupal\Core\Form\FormValidator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="csrf_token"/>
+      <argument type="service" id="logger.channel.form"/>
+      <argument type="service" id="form_error_handler"/>
+    </service>
+    <service id="form_submitter" class="Drupal\Core\Form\FormSubmitter" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="url_generator"/>
+    </service>
+    <service id="form_error_handler" class="Drupal\Core\Form\FormErrorHandler" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="keyvalue" class="Drupal\Core\KeyValueStore\KeyValueFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="service_container"/>
+      <argument>%factory.keyvalue%</argument>
+    </service>
+    <service id="keyvalue.database" class="Drupal\Core\KeyValueStore\KeyValueDatabaseFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="serialization.phpserialize"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="keyvalue.expirable" class="Drupal\Core\KeyValueStore\KeyValueExpirableFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="service_container"/>
+      <argument>%factory.keyvalue.expirable%</argument>
+    </service>
+    <service id="keyvalue.expirable.database" class="Drupal\Core\KeyValueStore\KeyValueDatabaseExpirableFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="serialization.phpserialize"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="logger.factory" class="Drupal\Core\Logger\LoggerChannelFactory" public="true">
+      <tag name="service_collector" tag="logger" call="addLogger"/>
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="logger.channel.default" class="Drupal\Core\Logger\LoggerChannel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>system</argument>
+      <factory service="logger.factory" method="get"/>
+    </service>
+    <service id="logger.channel.php" class="Drupal\Core\Logger\LoggerChannel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>php</argument>
+      <factory service="logger.factory" method="get"/>
+    </service>
+    <service id="logger.channel.image" class="Drupal\Core\Logger\LoggerChannel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>image</argument>
+      <factory service="logger.factory" method="get"/>
+    </service>
+    <service id="logger.channel.cron" class="Drupal\Core\Logger\LoggerChannel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>cron</argument>
+      <factory service="logger.factory" method="get"/>
+    </service>
+    <service id="logger.channel.file" class="Drupal\Core\Logger\LoggerChannel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>file</argument>
+      <factory service="logger.factory" method="get"/>
+    </service>
+    <service id="logger.channel.form" class="Drupal\Core\Logger\LoggerChannel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>form</argument>
+      <factory service="logger.factory" method="get"/>
+    </service>
+    <service id="logger.channel.security" class="Drupal\Core\Logger\LoggerChannel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>security</argument>
+      <factory service="logger.factory" method="get"/>
+    </service>
+    <service id="logger.log_message_parser" class="Drupal\Core\Logger\LogMessageParser" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="serialization.json" class="Drupal\Component\Serialization\Json" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="serialization.phpserialize" class="Drupal\Component\Serialization\PhpSerialize" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="serialization.yaml" class="Drupal\Component\Serialization\Yaml" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="settings" class="Drupal\Core\Site\Settings" public="true">
+      <tag name="_provider" provider="core"/>
+      <factory class="Drupal\Core\Site\Settings" method="getInstance"/>
+    </service>
+    <service id="state" class="Drupal\Core\State\State" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="keyvalue"/>
+    </service>
+    <service id="queue" class="Drupal\Core\Queue\QueueFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="settings"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="queue.database" class="Drupal\Core\Queue\QueueDatabaseFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="path.current" class="Drupal\Core\Path\CurrentPathStack" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="http_client" class="GuzzleHttp\Client" public="true">
+      <tag name="_provider" provider="core"/>
+      <factory service="http_client_factory" method="fromOptions"/>
+    </service>
+    <service id="http_client_factory" class="Drupal\Core\Http\ClientFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service">
+        <service class="GuzzleHttp\HandlerStack">
+          <tag name="_provider" provider="core"/>
+          <factory class="GuzzleHttp\HandlerStack" method="create"/>
+          <configurator method="configure">
+            <service class="Drupal\Core\Http\HandlerStackConfigurator">
+              <tag name="service_id_collector" tag="http_client_middleware"/>
+              <tag name="_provider" provider="core"/>
+              <argument type="service" id="service_container"/>
+              <argument type="collection"/>
+            </service>
+          </configurator>
+        </service>
+      </argument>
+    </service>
+    <service id="plugin.manager.link_relation_type" class="Drupal\Core\Http\LinkRelationTypeManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.discovery"/>
+    </service>
+    <service id="theme.negotiator" class="Drupal\Core\Theme\ThemeNegotiator" public="true">
+      <tag name="service_id_collector" tag="theme_negotiator"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="access_check.theme"/>
+      <argument type="service" id="class_resolver"/>
+      <argument type="collection">
+        <argument>theme.negotiator.ajax_base_page</argument>
+        <argument>theme.negotiator.default</argument>
+      </argument>
+    </service>
+    <service id="theme.negotiator.default" class="Drupal\Core\Theme\DefaultNegotiator" public="true">
+      <tag name="theme_negotiator" priority="-100"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+    </service>
+    <service id="theme.negotiator.ajax_base_page" class="Drupal\Core\Theme\AjaxBasePageNegotiator" public="true">
+      <tag name="theme_negotiator" priority="1000"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="csrf_token"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="container.namespaces" class="ArrayObject" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>%container.namespaces%</argument>
+    </service>
+    <service id="module_handler" class="Drupal\Core\Extension\ModuleHandler" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument>%container.modules%</argument>
+      <argument type="service" id="cache.bootstrap"/>
+    </service>
+    <service id="module_installer" class="Drupal\Core\ProxyClass\Extension\ModuleInstaller" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.module_installer</argument>
+    </service>
+    <service id="extension.list.module" class="Drupal\Core\Extension\ModuleExtensionList" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument>module</argument>
+      <argument type="service" id="cache.default"/>
+      <argument type="service" id="info_parser"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="extension.list.profile"/>
+      <argument>null</argument>
+      <argument>%container.modules%</argument>
+    </service>
+    <service id="extension.list.profile" class="Drupal\Core\Extension\ProfileExtensionList" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument>profile</argument>
+      <argument type="service" id="cache.default"/>
+      <argument type="service" id="info_parser"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="state"/>
+      <argument>null</argument>
+    </service>
+    <service id="extension.list.theme" class="Drupal\Core\Extension\ThemeExtensionList" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument>theme</argument>
+      <argument type="service" id="cache.default"/>
+      <argument type="service" id="info_parser"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="extension.list.theme_engine"/>
+      <argument>null</argument>
+    </service>
+    <service id="extension.list.theme_engine" class="Drupal\Core\Extension\ThemeEngineExtensionList" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument>theme_engine</argument>
+      <argument type="service" id="cache.default"/>
+      <argument type="service" id="info_parser"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="state"/>
+      <argument>null</argument>
+    </service>
+    <service id="extension.path.resolver" class="Drupal\Core\Extension\ExtensionPathResolver" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="extension.list.module"/>
+      <argument type="service" id="extension.list.profile"/>
+      <argument type="service" id="extension.list.theme"/>
+      <argument type="service" id="extension.list.theme_engine"/>
+    </service>
+    <service id="content_uninstall_validator" class="Drupal\Core\ProxyClass\Entity\ContentUninstallValidator" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.content_uninstall_validator</argument>
+    </service>
+    <service id="required_module_uninstall_validator" class="Drupal\Core\ProxyClass\Extension\RequiredModuleUninstallValidator" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.required_module_uninstall_validator</argument>
+    </service>
+    <service id="module_required_by_themes_uninstall_validator" class="Drupal\Core\ProxyClass\Extension\ModuleRequiredByThemesUninstallValidator" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.module_required_by_themes_uninstall_validator</argument>
+    </service>
+    <service id="database_driver_uninstall_validator" class="Drupal\Core\ProxyClass\Extension\DatabaseDriverUninstallValidator" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.database_driver_uninstall_validator</argument>
+    </service>
+    <service id="theme_handler" class="Drupal\Core\Extension\ThemeHandler" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="extension.list.theme"/>
+    </service>
+    <service id="theme_installer" class="Drupal\Core\Extension\ThemeInstaller" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="theme_handler"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="config.installer"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="config.manager"/>
+      <argument type="service" id="asset.css.collection_optimizer"/>
+      <argument type="service" id="router.builder"/>
+      <argument type="service" id="logger.channel.default"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="extension.list.module"/>
+    </service>
+    <service id="entity.memory_cache" class="Drupal\Core\Cache\MemoryCache\MemoryCache" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="entity_type.manager" class="Drupal\Core\Entity\EntityTypeManager" public="true">
+      <tag name="plugin_manager_cache_clear"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="class_resolver"/>
+      <argument type="service" id="entity.last_installed_schema.repository"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="entity_type.repository" class="Drupal\Core\Entity\EntityTypeRepository" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="entity_type.bundle.info" class="Drupal\Core\Entity\EntityTypeBundleInfo" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="typed_data_manager"/>
+      <argument type="service" id="cache.discovery"/>
+    </service>
+    <service id="entity.repository" class="Drupal\Core\Entity\EntityRepository" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="context.repository"/>
+    </service>
+    <service id="entity_display.repository" class="Drupal\Core\Entity\EntityDisplayRepository" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="language_manager"/>
+    </service>
+    <service id="entity_field.manager" class="Drupal\Core\Entity\EntityFieldManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity_type.bundle.info"/>
+      <argument type="service" id="entity_display.repository"/>
+      <argument type="service" id="typed_data_manager"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="keyvalue"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="entity.last_installed_schema.repository"/>
+    </service>
+    <service id="entity_type.listener" class="Drupal\Core\Entity\EntityTypeListener" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity_field.manager"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="entity.last_installed_schema.repository"/>
+    </service>
+    <service id="entity_bundle.listener" class="Drupal\Core\Entity\EntityBundleListener" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity_type.bundle.info"/>
+      <argument type="service" id="entity_field.manager"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="entity_route_subscriber" class="Drupal\Core\EventSubscriber\EntityRouteProviderSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="entity.definition_update_manager" class="Drupal\Core\Entity\EntityDefinitionUpdateManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity.last_installed_schema.repository"/>
+      <argument type="service" id="entity_field.manager"/>
+      <argument type="service" id="entity_type.listener"/>
+      <argument type="service" id="field_storage_definition.listener"/>
+    </service>
+    <service id="entity.last_installed_schema.repository" class="Drupal\Core\Entity\EntityLastInstalledSchemaRepository" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="keyvalue"/>
+      <argument type="service" id="cache.discovery"/>
+    </service>
+    <service id="entity_field.deleted_fields_repository" class="Drupal\Core\Field\DeletedFieldsRepository" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="state"/>
+    </service>
+    <service id="field_storage_definition.listener" class="Drupal\Core\Field\FieldStorageDefinitionListener" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="entity.last_installed_schema.repository"/>
+      <argument type="service" id="entity_field.manager"/>
+      <argument type="service" id="entity_field.deleted_fields_repository"/>
+    </service>
+    <service id="field_definition.listener" class="Drupal\Core\Field\FieldDefinitionListener" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity_field.manager"/>
+      <argument type="service" id="keyvalue"/>
+      <argument type="service" id="cache.discovery"/>
+    </service>
+    <service id="entity.form_builder" class="Drupal\Core\Entity\EntityFormBuilder" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="form_builder"/>
+    </service>
+    <service id="entity.bundle_config_import_validator" class="Drupal\Core\Entity\Event\BundleConfigImportValidate" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.manager"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="entity.autocomplete_matcher" class="Drupal\Core\Entity\EntityAutocompleteMatcher" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="plugin.manager.entity_reference_selection"/>
+    </service>
+    <service id="plugin_form.factory" class="Drupal\Core\Plugin\PluginFormFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="class_resolver"/>
+    </service>
+    <service id="plugin.manager.entity_reference_selection" class="Drupal\Core\Entity\EntityReferenceSelection\SelectionPluginManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="plugin.manager.block" class="Drupal\Core\Block\BlockManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="logger.channel.default"/>
+    </service>
+    <service id="plugin.manager.field.field_type" class="Drupal\Core\Field\FieldTypePluginManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="typed_data_manager"/>
+    </service>
+    <service id="plugin.manager.field.widget" class="Drupal\Core\Field\WidgetPluginManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="plugin.manager.field.field_type"/>
+    </service>
+    <service id="plugin.manager.field.formatter" class="Drupal\Core\Field\FormatterPluginManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="plugin.manager.field.field_type"/>
+    </service>
+    <service id="plugin.manager.archiver" class="Drupal\Core\Archiver\ArchiverManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="file_system"/>
+    </service>
+    <service id="plugin.manager.action" class="Drupal\Core\Action\ActionManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="plugin.manager.menu.link" class="Drupal\Core\Menu\MenuLinkManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="menu.tree_storage"/>
+      <argument type="service" id="menu_link.static.overrides"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="menu.link_tree" class="Drupal\Core\Menu\MenuLinkTree" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="menu.tree_storage"/>
+      <argument type="service" id="plugin.manager.menu.link"/>
+      <argument type="service" id="router.route_provider"/>
+      <argument type="service" id="menu.active_trail"/>
+      <argument type="service" id="controller_resolver"/>
+    </service>
+    <service id="menu.default_tree_manipulators" class="Drupal\Core\Menu\DefaultMenuLinkTreeManipulators" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="access_manager"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="menu.active_trail" class="Drupal\Core\Menu\MenuActiveTrail" public="true">
+      <tag name="needs_destruction"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="plugin.manager.menu.link"/>
+      <argument type="service" id="current_route_match"/>
+      <argument type="service" id="cache.menu"/>
+      <argument type="service" id="lock"/>
+    </service>
+    <service id="menu.parent_form_selector" class="Drupal\Core\Menu\MenuParentFormSelector" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="menu.link_tree"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="string_translation"/>
+    </service>
+    <service id="plugin.manager.menu.local_action" class="Drupal\Core\Menu\LocalActionManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_kernel.controller.argument_resolver"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="current_route_match"/>
+      <argument type="service" id="router.route_provider"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="access_manager"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="plugin.manager.menu.local_task" class="Drupal\Core\Menu\LocalTaskManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_kernel.controller.argument_resolver"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="current_route_match"/>
+      <argument type="service" id="router.route_provider"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="access_manager"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="plugin.manager.menu.contextual_link" class="Drupal\Core\Menu\ContextualLinkManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="controller_resolver"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="access_manager"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="plugin.manager.display_variant" class="Drupal\Core\Display\VariantManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="plugin.manager.queue_worker" class="Drupal\Core\Queue\QueueWorkerManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="plugin.cache_clearer" class="Drupal\Core\ProxyClass\Plugin\CachedDiscoveryClearer" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.plugin.cache_clearer</argument>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="config.typed"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.link_relation_type"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="entity_type.manager"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.entity_reference_selection"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.block"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.field.field_type"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.field.widget"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.field.formatter"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.archiver"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.action"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.menu.local_action"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.menu.local_task"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.menu.contextual_link"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.display_variant"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.queue_worker"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="typed_data_manager"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="validation.constraint"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.mail"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.condition"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.element_info"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="image.toolkit.manager"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="image.toolkit.operation.manager"/>
+      </call>
+    </service>
+    <service id="paramconverter.menu_link" class="Drupal\Core\ProxyClass\ParamConverter\MenuLinkPluginConverter" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.paramconverter.menu_link</argument>
+    </service>
+    <service id="menu.tree_storage" class="Drupal\Core\Menu\MenuTreeStorage">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="cache.menu"/>
+      <argument type="service" id="cache_tags.invalidator"/>
+      <argument>menu_tree</argument>
+    </service>
+    <service id="menu_link.static.overrides" class="Drupal\Core\Menu\StaticMenuLinkOverrides" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+    </service>
+    <service id="request_stack" class="Symfony\Component\HttpFoundation\RequestStack" public="true">
+      <tag name="persist"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="current_route_match" class="Drupal\Core\Routing\CurrentRouteMatch" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="event_dispatcher" class="Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="service_container"/>
+      <argument type="collection">
+        <argument key="routing.route_finished" type="collection">
+          <argument key="200" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>cache_router_rebuild_subscriber</argument>
+                <argument>onRouterFinished</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="100" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>menu.rebuild_subscriber</argument>
+                <argument>onRouterRebuild</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.route_provider</argument>
+                <argument>reset</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.route_preloader</argument>
+                <argument>onFinishedRoutes</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.path_roots_subscriber</argument>
+                <argument>onRouteFinished</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-3000" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.route_provider.lazy_builder</argument>
+                <argument>routerRebuildFinished</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="config.save" type="collection">
+          <argument key="255" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config.factory</argument>
+                <argument>onConfigSave</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="128" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>entity.query.config</argument>
+                <argument>onConfigSave</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.fast_404_html</argument>
+                <argument>onConfigSave</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>update.post_update_registry</argument>
+                <argument>onConfigSave</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="config.delete" type="collection">
+          <argument key="255" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config.factory</argument>
+                <argument>onConfigDelete</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="128" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>entity.query.config</argument>
+                <argument>onConfigDelete</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="config.importer.missing_content" type="collection">
+          <argument key="-1024" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config.importer_subscriber</argument>
+                <argument>onMissingContent</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="kernel.request" type="collection">
+          <argument key="1000" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>options_request_listener</argument>
+                <argument>onRequest</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>redirect_leading_slashes_subscriber</argument>
+                <argument>redirect</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="300" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>authentication_subscriber</argument>
+                <argument>onKernelRequestAuthenticate</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="50" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>ajax_response.subscriber</argument>
+                <argument>onRequest</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="32" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router_listener</argument>
+                <argument>onKernelRequest</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="31" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>authentication_subscriber</argument>
+                <argument>onKernelRequestFilterProvider</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="30" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>maintenance_mode_subscriber</argument>
+                <argument>onKernelRequestMaintenance</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>database.replica_kill_switch</argument>
+                <argument>checkReplicaServer</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.route_preloader</argument>
+                <argument>onRequest</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="routing.route_dynamic" type="collection">
+          <argument key="3000" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.route_provider.lazy_builder</argument>
+                <argument>routerRebuilding</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>entity_route_subscriber</argument>
+                <argument>onDynamicRouteEvent</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="config.importer.validate" type="collection">
+          <argument key="20" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>entity.bundle_config_import_validator</argument>
+                <argument>onConfigImporterValidate</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config_import_subscriber</argument>
+                <argument>onConfigImporterValidate</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="routing.route_alter" type="collection">
+          <argument key="5000" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>route_http_method_subscriber</argument>
+                <argument>onRouteBuilding</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>route_subscriber.module</argument>
+                <argument>onAlterRoutes</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>route_special_attributes_subscriber</argument>
+                <argument>onAlterRoutes</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-150" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>route_subscriber.entity</argument>
+                <argument>onRoutingRouteAlterSetType</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-220" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>paramconverter_subscriber</argument>
+                <argument>onRoutingRouteAlterSetParameterConverters</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-1024" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.route_preloader</argument>
+                <argument>onAlterRoutes</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router.path_roots_subscriber</argument>
+                <argument>onRouteAlter</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="kernel.response" type="collection">
+          <argument key="128" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.enforced_form_response</argument>
+                <argument>onKernelResponse</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="16" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>finish_response_subscriber</argument>
+                <argument>onAllResponds</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="10" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>route_access_response_subscriber</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>client_error_response_subscriber</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="5" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>anonymous_user_response_subscriber</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>html_response.placeholder_strategy_subscriber</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>html_response.subscriber</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>finish_response_subscriber</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>response_generator_subscriber</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>redirect_response_subscriber</argument>
+                <argument>checkRedirectUrl</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-100" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>ajax_response.subscriber</argument>
+                <argument>onResponse</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-512" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>response_filter.active_link</argument>
+                <argument>onResponse</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>response_filter.rss.relative_url</argument>
+                <argument>onResponse</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="kernel.exception" type="collection">
+          <argument key="200" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.fast_404_html</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="128" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.enforced_form_response</argument>
+                <argument>onKernelException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="100" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.needs_installer</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="80" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>authentication_subscriber</argument>
+                <argument>onExceptionAccessDenied</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="75" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>route_enhancer.param_conversion</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>authentication_subscriber</argument>
+                <argument>onExceptionSendChallenge</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="51" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>form_ajax_subscriber</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="50" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.logger</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>maintenance_mode_subscriber</argument>
+                <argument>onKernelRequestMaintenance</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-50" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.custom_page_html</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-64" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router_listener</argument>
+                <argument>onKernelException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-75" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.default_json</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-128" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.default_html</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-256" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>exception.final</argument>
+                <argument>onException</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="kernel.view" type="collection">
+          <argument key="1" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>form_ajax_subscriber</argument>
+                <argument>onView</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="0" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>psr_response_view_subscriber</argument>
+                <argument>onKernelView</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>main_content_view_subscriber</argument>
+                <argument>onViewRenderArray</argument>
+              </argument>
+            </argument>
+          </argument>
+          <argument key="-10" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>renderer_non_html</argument>
+                <argument>onRespond</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="kernel.finish_request" type="collection">
+          <argument type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>router_listener</argument>
+                <argument>onKernelFinishRequest</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="site.maintenance_mode_request" type="collection">
+          <argument key="-1000" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>maintenance_mode_subscriber</argument>
+                <argument>onMaintenanceModeRequest</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="kernel.terminate" type="collection">
+          <argument key="100" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>request_close_subscriber</argument>
+                <argument>onTerminate</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>kernel_destruct_subscriber</argument>
+                <argument>onKernelTerminate</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="config.importer.import" type="collection">
+          <argument key="40" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config_snapshot_subscriber</argument>
+                <argument>onConfigImporterImport</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="config.transform.import" type="collection">
+          <argument key="-500" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config_exclude_modules_subscriber</argument>
+                <argument>onConfigTransformImport</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="config.transform.export" type="collection">
+          <argument key="500" type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config_exclude_modules_subscriber</argument>
+                <argument>onConfigTransformExport</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="kernel.controller" type="collection">
+          <argument type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>early_rendering_controller_wrapper_subscriber</argument>
+                <argument>onController</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+      </argument>
+    </service>
+    <service id="controller_resolver" class="Drupal\Core\Controller\ControllerResolver" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="psr7.http_message_factory"/>
+      <argument type="service" id="class_resolver"/>
+    </service>
+    <service id="class_resolver" class="Drupal\Core\DependencyInjection\ClassResolver" public="true">
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="title_resolver" class="Drupal\Core\Controller\TitleResolver" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="controller_resolver"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="http_kernel.controller.argument_resolver"/>
+    </service>
+    <service id="http_kernel" class="Drupal\Core\StackMiddleware\StackedHttpKernel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_middleware.negotiation"/>
+      <argument type="collection">
+        <argument type="service" id="http_middleware.negotiation"/>
+        <argument type="service" id="http_middleware.reverse_proxy"/>
+        <argument type="service" id="http_middleware.kernel_pre_handle"/>
+        <argument type="service" id="http_middleware.session"/>
+        <argument type="service" id="http_kernel.basic"/>
+      </argument>
+    </service>
+    <service id="http_kernel.basic" class="Symfony\Component\HttpKernel\HttpKernel" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="controller_resolver"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="http_kernel.controller.argument_resolver"/>
+      <argument>true</argument>
+    </service>
+    <service id="http_kernel.controller.argument_resolver" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service">
+        <service class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory">
+          <tag name="_provider" provider="core"/>
+        </service>
+      </argument>
+      <argument type="collection">
+        <argument type="service">
+          <service class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestAttributeValueResolver">
+            <tag name="_provider" provider="core"/>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver">
+            <tag name="_provider" provider="core"/>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Drupal\Core\Controller\ArgumentResolver\Psr7RequestValueResolver">
+            <tag name="_provider" provider="core"/>
+            <argument type="service" id="psr7.http_message_factory"/>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Drupal\Core\Controller\ArgumentResolver\RouteMatchValueResolver">
+            <tag name="_provider" provider="core"/>
+          </service>
+        </argument>
+        <argument type="service">
+          <service class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
+            <tag name="_provider" provider="core"/>
+          </service>
+        </argument>
+      </argument>
+    </service>
+    <service id="http_middleware.negotiation" class="Drupal\Core\StackMiddleware\NegotiationMiddleware" public="true">
+      <tag name="http_middleware" priority="400"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_middleware.reverse_proxy"/>
+    </service>
+    <service id="http_middleware.reverse_proxy" class="Drupal\Core\StackMiddleware\ReverseProxyMiddleware" public="true">
+      <tag name="http_middleware" priority="300"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_middleware.kernel_pre_handle"/>
+      <argument type="service" id="settings"/>
+    </service>
+    <service id="http_middleware.kernel_pre_handle" class="Drupal\Core\StackMiddleware\KernelPreHandle" public="true">
+      <tag name="http_middleware" priority="100"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_middleware.session"/>
+      <argument type="service" id="kernel"/>
+    </service>
+    <service id="http_middleware.session" class="Drupal\Core\StackMiddleware\Session" public="true">
+      <tag name="http_middleware" priority="50"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_kernel.basic"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="psr7.http_foundation_factory" class="Symfony\Bridge\PsrHttpMessage\Factory\HttpFoundationFactory" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="psr7.http_message_factory" class="Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service">
+        <service class="GuzzleHttp\Psr7\HttpFactory">
+          <tag name="_provider" provider="core"/>
+        </service>
+      </argument>
+      <argument type="service">
+        <service class="GuzzleHttp\Psr7\HttpFactory">
+          <tag name="_provider" provider="core"/>
+        </service>
+      </argument>
+      <argument type="service">
+        <service class="GuzzleHttp\Psr7\HttpFactory">
+          <tag name="_provider" provider="core"/>
+        </service>
+      </argument>
+      <argument type="service">
+        <service class="GuzzleHttp\Psr7\HttpFactory">
+          <tag name="_provider" provider="core"/>
+        </service>
+      </argument>
+    </service>
+    <service id="language_manager" class="Drupal\Core\Language\LanguageManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="language.default"/>
+    </service>
+    <service id="language.current_language_context" class="Drupal\Core\Language\ContextProvider\CurrentLanguageContext" public="true">
+      <tag name="context_provider"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="language_manager"/>
+    </service>
+    <service id="language.default" class="Drupal\Core\Language\LanguageDefault" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>%language.default_values%</argument>
+    </service>
+    <service id="string_translator.custom_strings" class="Drupal\Core\StringTranslation\Translator\CustomStrings" public="true">
+      <tag name="string_translator" priority="30"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="settings"/>
+    </service>
+    <service id="string_translation" class="Drupal\Core\StringTranslation\TranslationManager" public="true">
+      <tag name="service_collector" tag="string_translator" call="addTranslator"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="language.default"/>
+      <call method="addTranslator">
+        <argument type="service" id="string_translator.custom_strings"/>
+        <argument>30</argument>
+      </call>
+    </service>
+    <service id="typed_data_manager" class="Drupal\Core\TypedData\TypedDataManager" public="true">
+      <tag name="plugin_manager_cache_clear"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="class_resolver"/>
+      <call method="setValidationConstraintManager">
+        <argument type="service" id="validation.constraint"/>
+      </call>
+    </service>
+    <service id="validation.constraint" class="Drupal\Core\Validation\ConstraintManager" public="true">
+      <tag name="plugin_manager_cache_clear"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="lock" class="Drupal\Core\ProxyClass\Lock\DatabaseLockBackend" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.lock</argument>
+    </service>
+    <service id="lock.persistent" class="Drupal\Core\ProxyClass\Lock\PersistentDatabaseLockBackend" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.lock.persistent</argument>
+    </service>
+    <service id="router.request_context" class="Drupal\Core\Routing\RequestContext" public="true">
+      <tag name="persist"/>
+      <tag name="_provider" provider="core"/>
+      <call method="fromRequestStack">
+        <argument type="service" id="request_stack"/>
+      </call>
+    </service>
+    <service id="router.admin_context" class="Drupal\Core\Routing\AdminContext" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_route_match"/>
+    </service>
+    <service id="router.route_provider" class="Drupal\Core\Routing\RouteProvider" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="path.current"/>
+      <argument type="service" id="cache.data"/>
+      <argument type="service" id="path_processor_manager"/>
+      <argument type="service" id="cache_tags.invalidator"/>
+      <argument>router</argument>
+      <argument type="service" id="language_manager"/>
+    </service>
+    <service id="router.route_provider.lazy_builder" class="Drupal\Core\Routing\RouteProviderLazyBuilder" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router.route_provider"/>
+      <argument type="service" id="router.builder"/>
+    </service>
+    <service id="router.route_preloader" class="Drupal\Core\Routing\RoutePreloader" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router.route_provider"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="cache.bootstrap"/>
+    </service>
+    <service id="url_generator" class="Drupal\Core\Render\MetadataBubblingUrlGenerator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service">
+        <service class="Drupal\Core\Routing\UrlGenerator">
+          <tag name="_provider" provider="core"/>
+          <argument type="service" id="router.route_provider"/>
+          <argument type="service" id="path_processor_manager"/>
+          <argument type="service" id="route_processor_manager"/>
+          <argument type="service" id="request_stack"/>
+          <argument>%filter_protocols%</argument>
+          <call method="setContext">
+            <argument type="service" id="router.request_context" on-invalid="ignore"/>
+          </call>
+        </service>
+      </argument>
+      <argument type="service" id="renderer"/>
+      <call method="setContext">
+        <argument type="service" id="router.request_context" on-invalid="ignore"/>
+      </call>
+    </service>
+    <service id="redirect.destination" class="Drupal\Core\Routing\RedirectDestination" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="url_generator"/>
+    </service>
+    <service id="unrouted_url_assembler" class="Drupal\Core\Utility\UnroutedUrlAssembler" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="path_processor_manager"/>
+      <argument>%filter_protocols%</argument>
+    </service>
+    <service id="link_generator" class="Drupal\Core\Utility\LinkGenerator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="url_generator"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="router" class="Drupal\Core\Routing\AccessAwareRouter" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router.no_access_checks"/>
+      <argument type="service" id="access_manager"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="router.no_access_checks" class="Drupal\Core\Routing\Router" public="true">
+      <tag name="service_collector" tag="non_lazy_route_enhancer" call="addRouteEnhancer"/>
+      <tag name="service_collector" tag="route_enhancer" call="addRouteEnhancer"/>
+      <tag name="service_collector" tag="non_lazy_route_filter" call="addRouteFilter"/>
+      <tag name="service_collector" tag="route_filter" call="addRouteFilter"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router.route_provider"/>
+      <argument type="service" id="path.current"/>
+      <argument type="service" id="url_generator"/>
+      <call method="setContext">
+        <argument type="service" id="router.request_context"/>
+      </call>
+      <call method="addRouteEnhancer">
+        <argument type="service" id="route_enhancer.param_conversion"/>
+      </call>
+      <call method="addRouteEnhancer">
+        <argument type="service" id="route_enhancer.entity"/>
+      </call>
+      <call method="addRouteEnhancer">
+        <argument type="service" id="route_enhancer.form"/>
+      </call>
+      <call method="addRouteEnhancer">
+        <argument type="service" id="route_enhancer.entity_bundle"/>
+      </call>
+      <call method="addRouteEnhancer">
+        <argument type="service" id="route_enhancer.entity_revision"/>
+      </call>
+      <call method="addRouteFilter">
+        <argument type="service" id="method_filter"/>
+      </call>
+      <call method="addRouteFilter">
+        <argument type="service" id="content_type_header_matcher"/>
+      </call>
+      <call method="addRouteFilter">
+        <argument type="service" id="request_format_route_filter"/>
+      </call>
+    </service>
+    <service id="router.path_roots_subscriber" class="Drupal\Core\EventSubscriber\PathRootsSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="state"/>
+    </service>
+    <service id="entity.query.config" class="Drupal\Core\Config\Entity\Query\QueryFactory" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="keyvalue"/>
+      <argument type="service" id="config.manager"/>
+    </service>
+    <service id="entity.query.sql" class="Drupal\Core\Entity\Query\Sql\QueryFactory" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="pgsql.entity.query.sql" class="Drupal\Core\Entity\Query\Sql\pgsql\QueryFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="entity.query.null" class="Drupal\Core\Entity\Query\Null\QueryFactory" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="entity.query.keyvalue" class="Drupal\Core\Entity\KeyValueStore\Query\QueryFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="keyvalue"/>
+    </service>
+    <service id="router.dumper" class="Drupal\Core\ProxyClass\Routing\MatcherDumper" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.router.dumper</argument>
+    </service>
+    <service id="router.builder" class="Drupal\Core\ProxyClass\Routing\RouteBuilder" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.router.builder</argument>
+    </service>
+    <service id="menu.rebuild_subscriber" class="Drupal\Core\EventSubscriber\MenuRouterRebuildSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="plugin.manager.menu.link"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="database.replica_kill_switch"/>
+    </service>
+    <service id="path.matcher" class="Drupal\Core\Path\PathMatcher" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="current_route_match"/>
+    </service>
+    <service id="path.validator" class="Drupal\Core\Path\PathValidator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router"/>
+      <argument type="service" id="router.no_access_checks"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="path_processor_manager"/>
+    </service>
+    <service id="password" class="Drupal\Core\Password\PhpassHashedPassword" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>16</argument>
+    </service>
+    <service id="password_generator" class="Drupal\Core\Password\DefaultPasswordGenerator" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="request_format_route_filter" class="Drupal\Core\Routing\RequestFormatRouteFilter" public="true">
+      <tag name="route_filter"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="method_filter" class="Drupal\Core\Routing\MethodFilter" public="true">
+      <tag name="route_filter" priority="10"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="content_type_header_matcher" class="Drupal\Core\Routing\ContentTypeHeaderMatcher" public="true">
+      <tag name="route_filter" priority="5"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="paramconverter_manager" class="Drupal\Core\ParamConverter\ParamConverterManager" public="true">
+      <tag name="service_collector" tag="paramconverter" call="addConverter"/>
+      <tag name="_provider" provider="core"/>
+      <call method="addConverter">
+        <argument type="service" id="drupal.proxy_original_service.paramconverter.configentity_admin"/>
+        <argument>drupal.proxy_original_service.paramconverter.configentity_admin</argument>
+      </call>
+      <call method="addConverter">
+        <argument type="service" id="paramconverter.entity"/>
+        <argument>paramconverter.entity</argument>
+      </call>
+      <call method="addConverter">
+        <argument type="service" id="paramconverter.entity_revision"/>
+        <argument>paramconverter.entity_revision</argument>
+      </call>
+      <call method="addConverter">
+        <argument type="service" id="drupal.proxy_original_service.paramconverter.menu_link"/>
+        <argument>drupal.proxy_original_service.paramconverter.menu_link</argument>
+      </call>
+    </service>
+    <service id="paramconverter_subscriber" class="Drupal\Core\EventSubscriber\ParamConverterSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="paramconverter_manager"/>
+    </service>
+    <service id="paramconverter.entity" class="Drupal\Core\ParamConverter\EntityConverter" public="true">
+      <tag name="paramconverter"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity.repository"/>
+    </service>
+    <service id="paramconverter.entity_revision" class="Drupal\Core\ParamConverter\EntityRevisionParamConverter" public="true">
+      <tag name="paramconverter"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity.repository"/>
+    </service>
+    <service id="paramconverter.configentity_admin" class="Drupal\Core\ProxyClass\ParamConverter\AdminPathConfigEntityConverter" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.paramconverter.configentity_admin</argument>
+    </service>
+    <service id="route_subscriber.module" class="Drupal\Core\EventSubscriber\ModuleRouteSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="resolver_manager.entity" class="Drupal\Core\Entity\EntityResolverManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="class_resolver"/>
+    </service>
+    <service id="route_subscriber.entity" class="Drupal\Core\EventSubscriber\EntityRouteAlterSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="resolver_manager.entity"/>
+    </service>
+    <service id="ajax_response.subscriber" class="Drupal\Core\EventSubscriber\AjaxResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="ajax_response.attachments_processor"/>
+    </service>
+    <service id="form_ajax_subscriber" class="Drupal\Core\Form\EventSubscriber\FormAjaxSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="form_ajax_response_builder"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="messenger"/>
+    </service>
+    <service id="route_enhancer.param_conversion" class="Drupal\Core\Routing\Enhancer\ParamConversionEnhancer" public="true">
+      <tag name="route_enhancer" priority="5000"/>
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="paramconverter_manager"/>
+    </service>
+    <service id="route_enhancer.form" class="Drupal\Core\Routing\Enhancer\FormRouteEnhancer" public="true">
+      <tag name="route_enhancer"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="route_enhancer.entity" class="Drupal\Core\Entity\Enhancer\EntityRouteEnhancer" public="true">
+      <tag name="route_enhancer" priority="20"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="route_enhancer.entity_bundle" class="Drupal\Core\Entity\Enhancer\EntityBundleRouteEnhancer" public="true">
+      <tag name="route_enhancer"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="route_enhancer.entity_revision" class="Drupal\Core\Routing\Enhancer\EntityRevisionRouteEnhancer" public="true">
+      <tag name="route_enhancer"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="route_special_attributes_subscriber" class="Drupal\Core\EventSubscriber\SpecialAttributesRouteSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="route_http_method_subscriber" class="Drupal\Core\EventSubscriber\RouteMethodSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="psr_response_view_subscriber" class="Drupal\Core\EventSubscriber\PsrResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="psr7.http_foundation_factory"/>
+    </service>
+    <service id="main_content_view_subscriber" class="Drupal\Core\EventSubscriber\MainContentViewSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="class_resolver"/>
+      <argument type="service" id="current_route_match"/>
+      <argument>%main_content_renderers%</argument>
+    </service>
+    <service id="renderer_non_html" class="Drupal\Core\EventSubscriber\RenderArrayNonHtmlSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="main_content_renderer.html" class="Drupal\Core\Render\MainContent\HtmlRenderer" public="true">
+      <tag name="render.main_content_renderer" format="html"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="title_resolver"/>
+      <argument type="service" id="plugin.manager.display_variant"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="renderer"/>
+      <argument type="service" id="render_cache"/>
+      <argument>%renderer.config%</argument>
+      <argument type="service" id="theme.manager"/>
+    </service>
+    <service id="main_content_renderer.ajax" class="Drupal\Core\Render\MainContent\AjaxRenderer" public="true">
+      <tag name="render.main_content_renderer" format="drupal_ajax"/>
+      <tag name="render.main_content_renderer" format="iframeupload"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="plugin.manager.element_info"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="main_content_renderer.dialog" class="Drupal\Core\Render\MainContent\DialogRenderer" public="true">
+      <tag name="render.main_content_renderer" format="drupal_dialog"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="title_resolver"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="main_content_renderer.off_canvas" class="Drupal\Core\Render\MainContent\OffCanvasRenderer" public="true">
+      <tag name="render.main_content_renderer" format="drupal_dialog.off_canvas"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="title_resolver"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="main_content_renderer.off_canvas_top" class="Drupal\Core\Render\MainContent\OffCanvasRenderer" public="true">
+      <tag name="render.main_content_renderer" format="drupal_dialog.off_canvas_top"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="title_resolver"/>
+      <argument type="service" id="renderer"/>
+      <argument>top</argument>
+    </service>
+    <service id="main_content_renderer.modal" class="Drupal\Core\Render\MainContent\ModalRenderer" public="true">
+      <tag name="render.main_content_renderer" format="drupal_modal"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="title_resolver"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="controller.form" class="Drupal\Core\Controller\HtmlFormController" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_kernel.controller.argument_resolver"/>
+      <argument type="service" id="form_builder"/>
+      <argument type="service" id="class_resolver"/>
+    </service>
+    <service id="controller.entity_form" class="Drupal\Core\Entity\HtmlEntityFormController" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_kernel.controller.argument_resolver"/>
+      <argument type="service" id="form_builder"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="form_ajax_response_builder" class="Drupal\Core\Form\FormAjaxResponseBuilder" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="main_content_renderer.ajax"/>
+      <argument type="service" id="current_route_match"/>
+    </service>
+    <service id="router_listener" class="Symfony\Component\HttpKernel\EventListener\RouterListener" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="router.request_context"/>
+      <argument>null</argument>
+    </service>
+    <service id="options_request_listener" class="Drupal\Core\EventSubscriber\OptionsRequestSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router.route_provider"/>
+    </service>
+    <service id="bare_html_page_renderer" class="Drupal\Core\ProxyClass\Render\BareHtmlPageRenderer" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.bare_html_page_renderer</argument>
+    </service>
+    <service id="private_key" class="Drupal\Core\PrivateKey" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="state"/>
+    </service>
+    <service id="csrf_token" class="Drupal\Core\Access\CsrfTokenGenerator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="private_key"/>
+      <argument type="service" id="session_manager.metadata_bag"/>
+    </service>
+    <service id="access_arguments_resolver_factory" class="Drupal\Core\Access\AccessArgumentsResolverFactory" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="access_manager" class="Drupal\Core\Access\AccessManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router.route_provider"/>
+      <argument type="service" id="paramconverter_manager"/>
+      <argument type="service" id="access_arguments_resolver_factory"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="access_manager.check_provider"/>
+    </service>
+    <service id="access_manager.check_provider" class="Drupal\Core\Access\CheckProvider">
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.default</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_access</argument>
+        </argument>
+        <argument>false</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.entity</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_entity_access</argument>
+        </argument>
+        <argument>false</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.entity_create</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_entity_create_access</argument>
+        </argument>
+        <argument>false</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.entity_create_any</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_entity_create_any_access</argument>
+        </argument>
+        <argument>false</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.entity_delete_multiple</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_entity_delete_multiple_access</argument>
+        </argument>
+        <argument>false</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.theme</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_access_theme</argument>
+        </argument>
+        <argument>false</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.custom</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_custom_access</argument>
+        </argument>
+        <argument>false</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.csrf</argument>
+        <argument>access</argument>
+        <argument type="collection">
+          <argument>_csrf_token</argument>
+        </argument>
+        <argument>true</argument>
+      </call>
+      <call method="addCheckService">
+        <argument>access_check.header.csrf</argument>
+        <argument>access</argument>
+        <argument type="collection"/>
+        <argument>true</argument>
+      </call>
+    </service>
+    <service id="access_check.default" class="Drupal\Core\Access\DefaultAccessCheck" public="true">
+      <tag name="access_check" applies_to="_access"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="access_check.entity" class="Drupal\Core\Entity\EntityAccessCheck" public="true">
+      <tag name="access_check" applies_to="_entity_access"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="access_check.entity_create" class="Drupal\Core\Entity\EntityCreateAccessCheck" public="true">
+      <tag name="access_check" applies_to="_entity_create_access"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="access_check.entity_create_any" class="Drupal\Core\Entity\EntityCreateAnyAccessCheck" public="true">
+      <tag name="access_check" applies_to="_entity_create_any_access"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity_type.bundle.info"/>
+    </service>
+    <service id="access_check.entity_delete_multiple" class="Drupal\Core\Entity\EntityDeleteMultipleAccessCheck" public="true">
+      <tag name="access_check" applies_to="_entity_delete_multiple_access"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="tempstore.private"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="access_check.theme" class="Drupal\Core\Theme\ThemeAccessCheck" public="true">
+      <tag name="access_check" applies_to="_access_theme"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="theme_handler"/>
+    </service>
+    <service id="access_check.custom" class="Drupal\Core\Access\CustomAccessCheck" public="true">
+      <tag name="access_check" applies_to="_custom_access"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="controller_resolver"/>
+      <argument type="service" id="access_arguments_resolver_factory"/>
+    </service>
+    <service id="access_check.csrf" class="Drupal\Core\Access\CsrfAccessCheck" public="true">
+      <tag name="access_check" applies_to="_csrf_token" needs_incoming_request="1"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="csrf_token"/>
+    </service>
+    <service id="access_check.header.csrf" class="Drupal\Core\Access\CsrfRequestHeaderAccessCheck" public="true">
+      <tag name="access_check" needs_incoming_request="1"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="session_configuration"/>
+      <argument type="service" id="csrf_token"/>
+    </service>
+    <service id="maintenance_mode" class="Drupal\Core\Site\MaintenanceMode" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="config.factory"/>
+    </service>
+    <service id="maintenance_mode_subscriber" class="Drupal\Core\EventSubscriber\MaintenanceModeSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="maintenance_mode"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="url_generator"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="bare_html_page_renderer"/>
+      <argument type="service" id="messenger"/>
+      <argument type="service" id="event_dispatcher"/>
+    </service>
+    <service id="route_access_response_subscriber" class="Drupal\Core\EventSubscriber\RouteAccessResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="client_error_response_subscriber" class="Drupal\Core\EventSubscriber\ClientErrorResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="anonymous_user_response_subscriber" class="Drupal\Core\EventSubscriber\AnonymousUserResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="ajax_response.attachments_processor" class="Drupal\Core\Ajax\AjaxResponseAttachmentsProcessor" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="asset.resolver"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="asset.css.collection_renderer"/>
+      <argument type="service" id="asset.js.collection_renderer"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="renderer"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="html_response.attachments_processor" class="Drupal\Core\Render\HtmlResponseAttachmentsProcessor" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="asset.resolver"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="asset.css.collection_renderer"/>
+      <argument type="service" id="asset.js.collection_renderer"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="renderer"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="html_response.subscriber" class="Drupal\Core\EventSubscriber\HtmlResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="html_response.attachments_processor"/>
+    </service>
+    <service id="finish_response_subscriber" class="Drupal\Core\EventSubscriber\FinishResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="page_cache_request_policy"/>
+      <argument type="service" id="page_cache_response_policy"/>
+      <argument type="service" id="cache_contexts_manager"/>
+      <argument>false</argument>
+    </service>
+    <service id="response_generator_subscriber" class="Drupal\Core\EventSubscriber\ResponseGeneratorSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="redirect_response_subscriber" class="Drupal\Core\EventSubscriber\RedirectResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="unrouted_url_assembler"/>
+      <argument type="service" id="router.request_context"/>
+    </service>
+    <service id="redirect_leading_slashes_subscriber" class="Drupal\Core\EventSubscriber\RedirectLeadingSlashesSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="request_close_subscriber" class="Drupal\Core\EventSubscriber\RequestCloseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="config_import_subscriber" class="Drupal\Core\EventSubscriber\ConfigImportSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="service_collector" tag="module_install.uninstall_validator" call="addUninstallValidator"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="theme_handler"/>
+      <argument type="service" id="extension.list.module"/>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.content_uninstall_validator"/>
+      </call>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.required_module_uninstall_validator"/>
+      </call>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.module_required_by_themes_uninstall_validator"/>
+      </call>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.database_driver_uninstall_validator"/>
+      </call>
+    </service>
+    <service id="config_snapshot_subscriber" class="Drupal\Core\EventSubscriber\ConfigSnapshotSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.manager"/>
+      <argument type="service" id="config.storage"/>
+      <argument type="service" id="config.storage.snapshot"/>
+    </service>
+    <service id="config_exclude_modules_subscriber" class="Drupal\Core\EventSubscriber\ExcludedModulesEventSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.storage"/>
+      <argument type="service" id="settings"/>
+      <argument type="service" id="config.manager"/>
+    </service>
+    <service id="exception.needs_installer" class="Drupal\Core\EventSubscriber\ExceptionDetectNeedsInstallSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="exception.default_json" class="Drupal\Core\EventSubscriber\ExceptionJsonSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="exception.default_html" class="Drupal\Core\EventSubscriber\DefaultExceptionHtmlSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_kernel"/>
+      <argument type="service" id="logger.channel.php"/>
+      <argument type="service" id="redirect.destination"/>
+      <argument type="service" id="router.no_access_checks"/>
+    </service>
+    <service id="exception.final" class="Drupal\Core\EventSubscriber\FinalExceptionSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+    </service>
+    <service id="exception.logger" class="Drupal\Core\EventSubscriber\ExceptionLoggingSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="logger.factory"/>
+    </service>
+    <service id="exception.custom_page_html" class="Drupal\Core\EventSubscriber\CustomPageExceptionHtmlSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="http_kernel"/>
+      <argument type="service" id="logger.channel.php"/>
+      <argument type="service" id="redirect.destination"/>
+      <argument type="service" id="router.no_access_checks"/>
+      <argument type="service" id="access_manager"/>
+    </service>
+    <service id="exception.fast_404_html" class="Drupal\Core\EventSubscriber\Fast404ExceptionHtmlSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="cache_tags.invalidator"/>
+    </service>
+    <service id="exception.enforced_form_response" class="Drupal\Core\EventSubscriber\EnforcedFormResponseSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="route_processor_manager" class="Drupal\Core\RouteProcessor\RouteProcessorManager" public="true">
+      <tag name="service_collector" tag="route_processor_outbound" call="addOutbound"/>
+      <tag name="_provider" provider="core"/>
+      <call method="addOutbound">
+        <argument type="service" id="route_processor_current"/>
+        <argument>200</argument>
+      </call>
+      <call method="addOutbound">
+        <argument type="service" id="route_processor_csrf"/>
+        <argument>0</argument>
+      </call>
+    </service>
+    <service id="path_processor_manager" class="Drupal\Core\PathProcessor\PathProcessorManager" public="true">
+      <tag name="service_collector" tag="path_processor_inbound" call="addInbound"/>
+      <tag name="service_collector" tag="path_processor_outbound" call="addOutbound"/>
+      <tag name="_provider" provider="core"/>
+      <call method="addInbound">
+        <argument type="service" id="path_processor_decode"/>
+        <argument>1000</argument>
+      </call>
+      <call method="addInbound">
+        <argument type="service" id="path_processor_front"/>
+        <argument>200</argument>
+      </call>
+    </service>
+    <service id="path_processor_decode" class="Drupal\Core\PathProcessor\PathProcessorDecode" public="true">
+      <tag name="path_processor_inbound" priority="1000"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="path_processor_front" class="Drupal\Core\PathProcessor\PathProcessorFront" public="true">
+      <tag name="path_processor_inbound" priority="200"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+    </service>
+    <service id="route_processor_current" class="Drupal\Core\RouteProcessor\RouteProcessorCurrent" public="true">
+      <tag name="route_processor_outbound" priority="200"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_route_match"/>
+    </service>
+    <service id="route_processor_csrf" class="Drupal\Core\Access\RouteProcessorCsrf" public="true">
+      <tag name="route_processor_outbound"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="csrf_token"/>
+    </service>
+    <service id="transliteration" class="Drupal\Core\Transliteration\PhpTransliteration" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>null</argument>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="flood" class="Drupal\Core\Flood\DatabaseBackend" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="plugin.manager.mail" class="Drupal\Core\Mail\MailManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="logger.factory"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="plugin.manager.condition" class="Drupal\Core\Condition\ConditionManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="plugin.manager.element_info" class="Drupal\Core\Render\ElementInfoManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="cache_tags.invalidator"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="theme.manager"/>
+    </service>
+    <service id="stream_wrapper_manager" class="Drupal\Core\StreamWrapper\StreamWrapperManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+      <call method="addStreamWrapper">
+        <argument>stream_wrapper.public</argument>
+        <argument>Drupal\Core\StreamWrapper\PublicStream</argument>
+        <argument>public</argument>
+      </call>
+      <call method="addStreamWrapper">
+        <argument>stream_wrapper.temporary</argument>
+        <argument>Drupal\Core\StreamWrapper\TemporaryStream</argument>
+        <argument>temporary</argument>
+      </call>
+    </service>
+    <service id="stream_wrapper.public" class="Drupal\Core\StreamWrapper\PublicStream" public="true">
+      <tag name="stream_wrapper" scheme="public"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="stream_wrapper.temporary" class="Drupal\Core\StreamWrapper\TemporaryStream" public="true">
+      <tag name="stream_wrapper" scheme="temporary"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="kernel_destruct_subscriber" class="Drupal\Core\EventSubscriber\KernelDestructionSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+      <call method="registerService">
+        <argument>menu.active_trail</argument>
+      </call>
+      <call method="registerService">
+        <argument>theme.registry</argument>
+      </call>
+      <call method="registerService">
+        <argument>library.discovery.collector</argument>
+      </call>
+      <call method="registerService">
+        <argument>drupal.proxy_original_service.router.builder</argument>
+      </call>
+    </service>
+    <service id="image.toolkit.manager" class="Drupal\Core\ImageToolkit\ImageToolkitManager" public="true">
+      <tag name="plugin_manager_cache_clear"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="config.factory"/>
+    </service>
+    <service id="image.toolkit.operation.manager" class="Drupal\Core\ImageToolkit\ImageToolkitOperationManager" public="true">
+      <tag name="plugin_manager_cache_clear"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="logger.channel.image"/>
+      <argument type="service" id="image.toolkit.manager"/>
+    </service>
+    <service id="image.factory" class="Drupal\Core\Image\ImageFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="image.toolkit.manager"/>
+    </service>
+    <service id="breadcrumb" class="Drupal\Core\Breadcrumb\BreadcrumbManager" public="true">
+      <tag name="service_collector" tag="breadcrumb_builder" call="addBuilder"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="token" class="Drupal\Core\Utility\Token" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="cache.default"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="cache_tags.invalidator"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="batch.storage" class="Drupal\Core\ProxyClass\Batch\BatchStorage" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.batch.storage</argument>
+    </service>
+    <service id="country_manager" class="Drupal\Core\Locale\CountryManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="date.formatter" class="Drupal\Core\Datetime\DateFormatter" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="theme.manager" class="Drupal\Core\Theme\ThemeManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="theme.negotiator"/>
+      <argument type="service" id="theme.initialization"/>
+      <argument type="service" id="module_handler"/>
+      <call method="setThemeRegistry">
+        <argument type="service" id="theme.registry"/>
+      </call>
+    </service>
+    <service id="theme.initialization" class="Drupal\Core\Theme\ThemeInitialization" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="theme_handler"/>
+      <argument type="service" id="cache.bootstrap"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="theme.registry" class="Drupal\Core\Theme\Registry" public="true">
+      <tag name="needs_destruction"/>
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="cache.default"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="theme_handler"/>
+      <argument type="service" id="theme.initialization"/>
+      <argument type="service" id="cache.bootstrap"/>
+      <argument type="service" id="extension.list.module"/>
+      <call method="setThemeManager">
+        <argument type="service" id="theme.manager"/>
+      </call>
+    </service>
+    <service id="authentication" class="Drupal\Core\Authentication\AuthenticationManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="authentication_collector"/>
+    </service>
+    <service id="authentication_collector" class="Drupal\Core\Authentication\AuthenticationCollector" public="true">
+      <tag name="service_collector" tag="authentication_provider" call="addProvider"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="authentication_subscriber" class="Drupal\Core\EventSubscriber\AuthenticationSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="authentication"/>
+      <argument type="service" id="current_user"/>
+    </service>
+    <service id="account_switcher" class="Drupal\Core\Session\AccountSwitcher" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="session_handler.write_safe"/>
+    </service>
+    <service id="user_permissions_hash_generator" class="Drupal\Core\Session\PermissionsHashGenerator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="private_key"/>
+      <argument type="service" id="cache.bootstrap"/>
+      <argument type="service" id="cache.static"/>
+    </service>
+    <service id="current_user" class="Drupal\Core\Session\AccountProxy" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="event_dispatcher"/>
+    </service>
+    <service id="session_configuration" class="Drupal\Core\Session\SessionConfiguration" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>%session.storage.options%</argument>
+    </service>
+    <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
+      <tag name="service_collector" tag="session_bag" call="registerBag"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="session_manager"/>
+      <argument type="service">
+        <service class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag">
+          <tag name="_provider" provider="core"/>
+        </service>
+      </argument>
+      <argument type="service" id="session.flash_bag"/>
+    </service>
+    <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="session_handler.storage" class="Drupal\Core\Session\SessionHandler" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="session_handler.write_safe" class="Drupal\Core\Session\WriteSafeSessionHandler" public="true">
+      <tag name="session_handler_proxy" priority="150"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="session_handler.storage"/>
+    </service>
+    <service id="session_manager" class="Drupal\Core\Session\SessionManager" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="session_manager.metadata_bag"/>
+      <argument type="service" id="session_configuration"/>
+      <argument type="service" id="session_handler.write_safe"/>
+      <call method="setWriteSafeHandler">
+        <argument type="service" id="session_handler.write_safe"/>
+      </call>
+    </service>
+    <service id="session_manager.metadata_bag" class="Drupal\Core\Session\MetadataBag" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="settings"/>
+    </service>
+    <service id="asset.css.collection_renderer" class="Drupal\Core\Asset\CssCollectionRenderer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="file_url_generator"/>
+    </service>
+    <service id="asset.css.collection_optimizer" class="Drupal\Core\Asset\CssCollectionOptimizer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="asset.css.collection_grouper"/>
+      <argument type="service" id="asset.css.optimizer"/>
+      <argument type="service" id="asset.css.dumper"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="file_system"/>
+    </service>
+    <service id="asset.css.optimizer" class="Drupal\Core\Asset\CssOptimizer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="file_url_generator"/>
+    </service>
+    <service id="asset.css.collection_grouper" class="Drupal\Core\Asset\CssCollectionGrouper" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="asset.css.dumper" class="Drupal\Core\Asset\AssetDumper" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="file_system"/>
+    </service>
+    <service id="asset.js.collection_renderer" class="Drupal\Core\Asset\JsCollectionRenderer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="file_url_generator"/>
+    </service>
+    <service id="asset.js.collection_optimizer" class="Drupal\Core\Asset\JsCollectionOptimizer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="asset.js.collection_grouper"/>
+      <argument type="service" id="asset.js.optimizer"/>
+      <argument type="service" id="asset.js.dumper"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="file_system"/>
+    </service>
+    <service id="asset.js.optimizer" class="Drupal\Core\Asset\JsOptimizer" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="asset.js.collection_grouper" class="Drupal\Core\Asset\JsCollectionGrouper" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="asset.js.dumper" class="Drupal\Core\Asset\AssetDumper" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="file_system"/>
+    </service>
+    <service id="library.discovery" class="Drupal\Core\Asset\LibraryDiscovery" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="library.discovery.collector"/>
+    </service>
+    <service id="library.discovery.collector" class="Drupal\Core\Asset\LibraryDiscoveryCollector" public="true">
+      <tag name="needs_destruction"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="library.discovery.parser"/>
+      <argument type="service" id="theme.manager"/>
+    </service>
+    <service id="library.discovery.parser" class="Drupal\Core\Asset\LibraryDiscoveryParser" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="theme.manager"/>
+      <argument type="service" id="stream_wrapper_manager"/>
+      <argument type="service" id="library.libraries_directory_file_finder"/>
+      <argument type="service" id="extension.path.resolver"/>
+    </service>
+    <service id="library.libraries_directory_file_finder" class="Drupal\Core\Asset\LibrariesDirectoryFileFinder" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument>sites/default</argument>
+      <argument type="service" id="extension.list.profile"/>
+      <argument>null</argument>
+    </service>
+    <service id="library.dependency_resolver" class="Drupal\Core\Asset\LibraryDependencyResolver" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="library.discovery"/>
+    </service>
+    <service id="asset.resolver" class="Drupal\Core\Asset\AssetResolver" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="library.discovery"/>
+      <argument type="service" id="library.dependency_resolver"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="theme.manager"/>
+      <argument type="service" id="language_manager"/>
+      <argument type="service" id="cache.data"/>
+    </service>
+    <service id="info_parser" class="Drupal\Core\Extension\InfoParser" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+    </service>
+    <service id="twig" class="Drupal\Core\Template\TwigEnvironment" public="true">
+      <tag name="service_collector" tag="twig.extension" call="addExtension"/>
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="cache.default"/>
+      <argument>bezcDeLHfzz3zStvTHvrnbP0CUntduoW4cW1OOiUKdc</argument>
+      <argument type="service" id="state"/>
+      <argument type="service">
+        <service class="Twig\Loader\ChainLoader">
+          <tag name="service_collector" tag="twig.loader" call="addLoader" required="1"/>
+          <tag name="_provider" provider="core"/>
+          <call method="addLoader">
+            <argument type="service" id="twig.loader.filesystem"/>
+          </call>
+          <call method="addLoader">
+            <argument type="service" id="twig.loader.theme_registry"/>
+          </call>
+          <call method="addLoader">
+            <argument type="service" id="twig.loader.string"/>
+          </call>
+        </service>
+      </argument>
+      <argument>%twig.config%</argument>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.debug"/>
+      </call>
+      <call method="addExtension">
+        <argument type="service" id="twig.extension.varDumper"/>
+      </call>
+    </service>
+    <service id="twig.extension" class="Drupal\Core\Template\TwigExtension" public="true">
+      <tag name="twig.extension" priority="100"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="renderer"/>
+      <argument type="service" id="url_generator"/>
+      <argument type="service" id="theme.manager"/>
+      <argument type="service" id="date.formatter"/>
+      <argument type="service" id="file_url_generator"/>
+    </service>
+    <service id="twig.extension.debug" class="Twig\Extension\DebugExtension" public="true">
+      <tag name="twig.extension" priority="50"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="twig.extension.varDumper" class="Drupal\Core\Template\DebugExtension" public="true">
+      <tag name="twig.extension" priority="25"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="twig.loader.filesystem" class="Drupal\Core\Template\Loader\FilesystemLoader" public="true">
+      <tag name="twig.loader" priority="100"/>
+      <tag name="_provider" provider="core"/>
+      <argument>.</argument>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="theme_handler"/>
+      <argument>%twig.config%</argument>
+    </service>
+    <service id="twig.loader.theme_registry" class="Drupal\Core\Template\Loader\ThemeRegistryLoader" public="true">
+      <tag name="twig.loader" priority="0"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="theme.registry"/>
+    </service>
+    <service id="twig.loader.string" class="Drupal\Core\Template\Loader\StringLoader" public="true">
+      <tag name="twig.loader" priority="-100"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="file.htaccess_writer" class="Drupal\Core\File\HtaccessWriter" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="logger.channel.security"/>
+      <argument type="service" id="stream_wrapper_manager"/>
+    </service>
+    <service id="file.mime_type.guesser" class="Drupal\Core\ProxyClass\File\MimeType\MimeTypeGuesser" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.file.mime_type.guesser</argument>
+    </service>
+    <service id="file.mime_type.guesser.extension" class="Drupal\Core\ProxyClass\File\MimeType\ExtensionMimeTypeGuesser" public="true">
+      <argument type="service" id="service_container"/>
+      <argument>drupal.proxy_original_service.file.mime_type.guesser.extension</argument>
+    </service>
+    <service id="render_placeholder_generator" class="Drupal\Core\Render\PlaceholderGenerator" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument>%renderer.config%</argument>
+    </service>
+    <service id="render_cache" class="Drupal\Core\Render\PlaceholderingRenderCache" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="cache_factory"/>
+      <argument type="service" id="cache_contexts_manager"/>
+      <argument type="service" id="render_placeholder_generator"/>
+    </service>
+    <service id="renderer" class="Drupal\Core\Render\Renderer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="controller_resolver"/>
+      <argument type="service" id="theme.manager"/>
+      <argument type="service" id="plugin.manager.element_info"/>
+      <argument type="service" id="render_placeholder_generator"/>
+      <argument type="service" id="render_cache"/>
+      <argument type="service" id="request_stack"/>
+      <argument>%renderer.config%</argument>
+    </service>
+    <service id="early_rendering_controller_wrapper_subscriber" class="Drupal\Core\EventSubscriber\EarlyRenderingControllerWrapperSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="http_kernel.controller.argument_resolver"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="html_response.placeholder_strategy_subscriber" class="Drupal\Core\EventSubscriber\HtmlResponsePlaceholderStrategySubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="placeholder_strategy"/>
+    </service>
+    <service id="placeholder_strategy" class="Drupal\Core\Render\Placeholder\ChainedPlaceholderStrategy" public="true">
+      <tag name="service_collector" tag="placeholder_strategy" call="addPlaceholderStrategy"/>
+      <tag name="_provider" provider="core"/>
+      <call method="addPlaceholderStrategy">
+        <argument type="service" id="placeholder_strategy.single_flush"/>
+      </call>
+    </service>
+    <service id="placeholder_strategy.single_flush" class="Drupal\Core\Render\Placeholder\SingleFlushStrategy" public="true">
+      <tag name="placeholder_strategy" priority="-1000"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="email.validator" class="Drupal\Component\Utility\EmailValidator" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="update.update_hook_registry" class="Drupal\Core\Update\UpdateHookRegistry" public="true">
+      <tag name="_provider" provider="core"/>
+      <factory service="update.update_hook_registry_factory" method="create"/>
+    </service>
+    <service id="update.update_hook_registry_factory" class="Drupal\Core\Update\UpdateHookRegistryFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="update.post_update_registry" class="Drupal\Core\Update\UpdateRegistry" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <factory service="update.post_update_registry_factory" method="create"/>
+    </service>
+    <service id="update.post_update_registry_factory" class="Drupal\Core\Update\UpdateRegistryFactory" public="true">
+      <tag name="_provider" provider="core"/>
+      <call method="setContainer">
+        <argument type="service" id="service_container"/>
+      </call>
+    </service>
+    <service id="uuid" class="Drupal\Component\Uuid\Php" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="response_filter.active_link" class="Drupal\Core\EventSubscriber\ActiveLinkResponseFilter" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="path.current"/>
+      <argument type="service" id="path.matcher"/>
+      <argument type="service" id="language_manager"/>
+    </service>
+    <service id="response_filter.rss.relative_url" class="Drupal\Core\EventSubscriber\RssResponseRelativeUrlFilter" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="messenger" class="Drupal\Core\Messenger\Messenger" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="session.flash_bag"/>
+      <argument type="service" id="page_cache_kill_switch"/>
+    </service>
+    <service id="tempstore.private" class="Drupal\Core\TempStore\PrivateTempStoreFactory" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="keyvalue.expirable"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="request_stack"/>
+      <argument>604800</argument>
+    </service>
+    <service id="tempstore.shared" class="Drupal\Core\TempStore\SharedTempStoreFactory" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="keyvalue.expirable"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="current_user"/>
+      <argument>604800</argument>
+    </service>
+    <service id="pager.manager" class="Drupal\Core\Pager\PagerManager" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="pager.parameters"/>
+    </service>
+    <service id="pager.parameters" class="Drupal\Core\Pager\PagerParameters" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="drupal.proxy_original_service.page_cache_response_policy" class="Drupal\Core\PageCache\ChainResponsePolicy" public="true">
+      <tag name="service_collector" tag="page_cache_response_policy" call="addPolicy"/>
+      <tag name="_provider" provider="core"/>
+      <call method="addPolicy">
+        <argument type="service" id="page_cache_kill_switch"/>
+      </call>
+      <call method="addPolicy">
+        <argument type="service">
+          <service class="Drupal\Core\PageCache\ResponsePolicy\DenyNoCacheRoutes">
+            <tag name="page_cache_response_policy"/>
+            <tag name="dynamic_page_cache_response_policy"/>
+            <tag name="_provider" provider="core"/>
+            <argument type="service" id="current_route_match"/>
+          </service>
+        </argument>
+      </call>
+      <call method="addPolicy">
+        <argument type="service">
+          <service class="Drupal\Core\PageCache\ResponsePolicy\NoServerError">
+            <tag name="page_cache_response_policy"/>
+            <tag name="dynamic_page_cache_response_policy"/>
+            <tag name="_provider" provider="core"/>
+          </service>
+        </argument>
+      </call>
+    </service>
+    <service id="drupal.proxy_original_service.config.installer" class="Drupal\Core\Config\ConfigInstaller" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="config.storage"/>
+      <argument type="service" id="config.typed"/>
+      <argument type="service" id="config.manager"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument>null</argument>
+      <argument type="service" id="extension.path.resolver"/>
+    </service>
+    <service id="drupal.proxy_original_service.cron" class="Drupal\Core\Cron" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="queue"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="account_switcher"/>
+      <argument type="service" id="logger.channel.cron"/>
+      <argument type="service" id="plugin.manager.queue_worker"/>
+      <argument type="service" id="datetime.time"/>
+    </service>
+    <service id="drupal.proxy_original_service.module_installer" class="Drupal\Core\Extension\ModuleInstaller" public="true">
+      <tag name="service_collector" tag="module_install.uninstall_validator" call="addUninstallValidator"/>
+      <tag name="_provider" provider="core"/>
+      <argument>/Users/private/d/d10/web</argument>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="kernel"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="update.update_hook_registry"/>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.content_uninstall_validator"/>
+      </call>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.required_module_uninstall_validator"/>
+      </call>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.module_required_by_themes_uninstall_validator"/>
+      </call>
+      <call method="addUninstallValidator">
+        <argument type="service" id="drupal.proxy_original_service.database_driver_uninstall_validator"/>
+      </call>
+    </service>
+    <service id="drupal.proxy_original_service.content_uninstall_validator" class="Drupal\Core\Entity\ContentUninstallValidator" public="true">
+      <tag name="module_install.uninstall_validator"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="string_translation"/>
+    </service>
+    <service id="drupal.proxy_original_service.required_module_uninstall_validator" class="Drupal\Core\Extension\RequiredModuleUninstallValidator" public="true">
+      <tag name="module_install.uninstall_validator"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="extension.list.module"/>
+    </service>
+    <service id="drupal.proxy_original_service.module_required_by_themes_uninstall_validator" class="Drupal\Core\Extension\ModuleRequiredByThemesUninstallValidator" public="true">
+      <tag name="module_install.uninstall_validator"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="extension.list.module"/>
+      <argument type="service" id="extension.list.theme"/>
+    </service>
+    <service id="drupal.proxy_original_service.database_driver_uninstall_validator" class="Drupal\Core\Extension\DatabaseDriverUninstallValidator" public="true">
+      <tag name="module_install.uninstall_validator"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="extension.list.module"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="drupal.proxy_original_service.plugin.cache_clearer" class="Drupal\Core\Plugin\CachedDiscoveryClearer" public="true">
+      <tag name="_provider" provider="core"/>
+    </service>
+    <service id="drupal.proxy_original_service.paramconverter.menu_link" class="Drupal\Core\ParamConverter\MenuLinkPluginConverter" public="true">
+      <tag name="paramconverter"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="plugin.manager.menu.link"/>
+    </service>
+    <service id="drupal.proxy_original_service.lock" class="Drupal\Core\Lock\DatabaseLockBackend" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="drupal.proxy_original_service.lock.persistent" class="Drupal\Core\Lock\PersistentDatabaseLockBackend" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+    </service>
+    <service id="drupal.proxy_original_service.router.dumper" class="Drupal\Core\Routing\MatcherDumper" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="state"/>
+    </service>
+    <service id="drupal.proxy_original_service.router.builder" class="Drupal\Core\Routing\RouteBuilder" public="true">
+      <tag name="needs_destruction"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="router.dumper"/>
+      <argument type="service" id="lock"/>
+      <argument type="service" id="event_dispatcher"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="controller_resolver"/>
+      <argument type="service" id="access_manager.check_provider"/>
+    </service>
+    <service id="drupal.proxy_original_service.paramconverter.configentity_admin" class="Drupal\Core\ParamConverter\AdminPathConfigEntityConverter" public="true">
+      <tag name="paramconverter" priority="5"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="router.admin_context"/>
+      <argument type="service" id="entity.repository"/>
+    </service>
+    <service id="drupal.proxy_original_service.bare_html_page_renderer" class="Drupal\Core\Render\BareHtmlPageRenderer" public="true">
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="renderer"/>
+      <argument type="service" id="html_response.attachments_processor"/>
+    </service>
+    <service id="drupal.proxy_original_service.batch.storage" class="Drupal\Core\Batch\BatchStorage" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="session"/>
+      <argument type="service" id="csrf_token"/>
+    </service>
+    <service id="drupal.proxy_original_service.file.mime_type.guesser" class="Drupal\Core\File\MimeType\MimeTypeGuesser" public="true">
+      <tag name="service_collector" tag="mime_type_guesser" call="addMimeTypeGuesser"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="stream_wrapper_manager"/>
+      <call method="addMimeTypeGuesser">
+        <argument type="service" id="drupal.proxy_original_service.file.mime_type.guesser.extension"/>
+        <argument>0</argument>
+      </call>
+    </service>
+    <service id="drupal.proxy_original_service.file.mime_type.guesser.extension" class="Drupal\Core\File\MimeType\ExtensionMimeTypeGuesser" public="true">
+      <tag name="mime_type_guesser"/>
+      <tag name="_provider" provider="core"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="session_handler" alias="session_handler.write_safe" public="true"/>
+    <service id="element_info" alias="plugin.manager.element_info" public="true"/>
+  </services>
+</container>
