@@ -23,6 +23,8 @@
             <extensions>
               <!-- List your modules explicitly here, as the scan may happen without a database -->
               <module name="app_log" />
+              <module name="language" />
+              <module name="locale" />
             </extensions>
         </pluginClass>
     </plugins>
