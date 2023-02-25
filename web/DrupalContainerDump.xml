@@ -8,10 +8,52 @@
         <parameter key="pathname">modules/custom/app_log/app_log.info.yml</parameter>
         <parameter key="filename">null</parameter>
       </parameter>
+      <parameter key="automated_cron" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">core/modules/automated_cron/automated_cron.info.yml</parameter>
+        <parameter key="filename">automated_cron.module</parameter>
+      </parameter>
+      <parameter key="block" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">core/modules/block/block.info.yml</parameter>
+        <parameter key="filename">block.module</parameter>
+      </parameter>
+      <parameter key="breakpoint" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">core/modules/breakpoint/breakpoint.info.yml</parameter>
+        <parameter key="filename">breakpoint.module</parameter>
+      </parameter>
+      <parameter key="comment" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">core/modules/comment/comment.info.yml</parameter>
+        <parameter key="filename">comment.module</parameter>
+      </parameter>
+      <parameter key="config" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">core/modules/config/config.info.yml</parameter>
+        <parameter key="filename">config.module</parameter>
+      </parameter>
+      <parameter key="contextual" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">core/modules/contextual/contextual.info.yml</parameter>
+        <parameter key="filename">contextual.module</parameter>
+      </parameter>
+      <parameter key="editor" type="collection">
+        <parameter key="type">module</parameter>
+        <parameter key="pathname">core/modules/editor/editor.info.yml</parameter>
+        <parameter key="filename">editor.module</parameter>
+      </parameter>
     </parameter>
     <parameter key="install_profile">null</parameter>
     <parameter key="container.namespaces" type="collection">
       <parameter key="Drupal\app_log">modules/custom/app_log/src</parameter>
+      <parameter key="Drupal\automated_cron">core/modules/automated_cron/src</parameter>
+      <parameter key="Drupal\block">core/modules/block/src</parameter>
+      <parameter key="Drupal\breakpoint">core/modules/breakpoint/src</parameter>
+      <parameter key="Drupal\comment">core/modules/comment/src</parameter>
+      <parameter key="Drupal\config">core/modules/config/src</parameter>
+      <parameter key="Drupal\contextual">core/modules/contextual/src</parameter>
+      <parameter key="Drupal\editor">core/modules/editor/src</parameter>
       <parameter key="Drupal\Core\ProxyClass">core/lib/Drupal/Core/ProxyClass</parameter>
       <parameter key="Drupal\Core\Config">core/lib/Drupal/Core/Config</parameter>
       <parameter key="Drupal\Core\TypedData">core/lib/Drupal/Core/TypedData</parameter>
@@ -745,6 +787,7 @@
       <argument type="service" id="class_resolver"/>
       <argument type="collection">
         <argument>theme.negotiator.ajax_base_page</argument>
+        <argument>theme.negotiator.block.admin_demo</argument>
         <argument>theme.negotiator.default</argument>
       </argument>
     </service>
@@ -1180,6 +1223,12 @@
       <call method="addCachedDiscovery">
         <argument type="service" id="image.toolkit.operation.manager"/>
       </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="breakpoint.manager"/>
+      </call>
+      <call method="addCachedDiscovery">
+        <argument type="service" id="plugin.manager.editor"/>
+      </call>
     </service>
     <service id="paramconverter.menu_link" class="Drupal\Core\ProxyClass\ParamConverter\MenuLinkPluginConverter" public="true">
       <argument type="service" id="service_container"/>
@@ -1414,6 +1463,12 @@
             <argument type="collection">
               <argument key="service" type="collection">
                 <argument>config_import_subscriber</argument>
+                <argument>onConfigImporterValidate</argument>
+              </argument>
+            </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>config.config_subscriber</argument>
                 <argument>onConfigImporterValidate</argument>
               </argument>
             </argument>
@@ -1745,6 +1800,12 @@
                 <argument>onKernelTerminate</argument>
               </argument>
             </argument>
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>automated_cron.subscriber</argument>
+                <argument>onTerminate</argument>
+              </argument>
+            </argument>
           </argument>
         </argument>
         <argument key="config.importer.import" type="collection">
@@ -1783,6 +1844,16 @@
               <argument key="service" type="collection">
                 <argument>early_rendering_controller_wrapper_subscriber</argument>
                 <argument>onController</argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="render.page_display_variant.select" type="collection">
+          <argument type="collection">
+            <argument type="collection">
+              <argument key="service" type="collection">
+                <argument>block.page_display_variant_subscriber</argument>
+                <argument>onSelectPageDisplayVariant</argument>
               </argument>
             </argument>
           </argument>
@@ -2805,6 +2876,10 @@
       <tag name="service_collector" tag="breadcrumb_builder" call="addBuilder"/>
       <tag name="_provider" provider="core"/>
       <argument type="service" id="module_handler"/>
+      <call method="addBuilder">
+        <argument type="service" id="comment.breadcrumb"/>
+        <argument>100</argument>
+      </call>
     </service>
     <service id="token" class="Drupal\Core\Utility\Token" public="true">
       <tag name="_provider" provider="core"/>
@@ -3220,6 +3295,95 @@
     <service id="pager.parameters" class="Drupal\Core\Pager\PagerParameters" public="true">
       <tag name="_provider" provider="core"/>
       <argument type="service" id="request_stack"/>
+    </service>
+    <service id="automated_cron.subscriber" class="Drupal\automated_cron\EventSubscriber\AutomatedCron" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="automated_cron"/>
+      <argument type="service" id="cron"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="state"/>
+    </service>
+    <service id="theme.negotiator.block.admin_demo" class="Drupal\block\Theme\AdminDemoNegotiator" public="true">
+      <tag name="theme_negotiator" priority="1000"/>
+      <tag name="_provider" provider="block"/>
+    </service>
+    <service id="block.page_display_variant_subscriber" class="Drupal\block\EventSubscriber\BlockPageDisplayVariantSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="block"/>
+    </service>
+    <service id="block.repository" class="Drupal\block\BlockRepository" public="true">
+      <tag name="_provider" provider="block"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="theme.manager"/>
+      <argument type="service" id="context.handler"/>
+    </service>
+    <service id="breakpoint.manager" class="Drupal\breakpoint\BreakpointManager" public="true">
+      <tag name="plugin_manager_cache_clear"/>
+      <tag name="_provider" provider="breakpoint"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="theme_handler"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="string_translation"/>
+    </service>
+    <service id="comment.breadcrumb" class="Drupal\comment\CommentBreadcrumbBuilder" public="true">
+      <tag name="breadcrumb_builder" priority="100"/>
+      <tag name="_provider" provider="comment"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="comment.manager" class="Drupal\comment\CommentManager" public="true">
+      <tag name="_provider" provider="comment"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="config.factory"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="entity_field.manager"/>
+      <argument type="service" id="entity_display.repository"/>
+    </service>
+    <service id="comment.statistics" class="Drupal\comment\CommentStatistics" public="true">
+      <tag name="backend_overridable"/>
+      <tag name="_provider" provider="comment"/>
+      <argument type="service" id="database"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="state"/>
+      <argument type="service" id="database.replica"/>
+    </service>
+    <service id="comment.lazy_builders" class="Drupal\comment\CommentLazyBuilders" public="true">
+      <tag name="_provider" provider="comment"/>
+      <argument type="service" id="entity_type.manager"/>
+      <argument type="service" id="entity.form_builder"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="comment.manager"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="renderer"/>
+    </service>
+    <service id="comment.link_builder" class="Drupal\comment\CommentLinkBuilder" public="true">
+      <tag name="_provider" provider="comment"/>
+      <argument type="service" id="current_user"/>
+      <argument type="service" id="comment.manager"/>
+      <argument type="service" id="module_handler"/>
+      <argument type="service" id="string_translation"/>
+      <argument type="service" id="entity_type.manager"/>
+    </service>
+    <service id="config.config_subscriber" class="Drupal\config\ConfigSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="config"/>
+    </service>
+    <service id="plugin.manager.editor" class="Drupal\editor\Plugin\EditorManager" public="true">
+      <tag name="_provider" provider="editor"/>
+      <argument type="service" id="container.namespaces"/>
+      <argument type="service" id="cache.discovery"/>
+      <argument type="service" id="module_handler"/>
+    </service>
+    <service id="element.editor" class="Drupal\editor\Element" public="true">
+      <tag name="_provider" provider="editor"/>
+      <argument type="service" id="plugin.manager.editor"/>
+    </service>
+    <service id="editor.config_translation_mapper_subscriber" class="Drupal\editor\EventSubscriber\EditorConfigTranslationSubscriber" public="true">
+      <tag name="event_subscriber"/>
+      <tag name="_provider" provider="editor"/>
+      <argument type="service" id="config.factory"/>
     </service>
     <service id="drupal.proxy_original_service.page_cache_response_policy" class="Drupal\Core\PageCache\ChainResponsePolicy" public="true">
       <tag name="service_collector" tag="page_cache_response_policy" call="addPolicy"/>
